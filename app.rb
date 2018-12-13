@@ -20,13 +20,15 @@ post '/visit' do
 	@phone = params[:phone]
 	@date_time = params[:datetime]
 	@barber = params[:barber]
+	#https://github.com/tkrotoff/jquery-simplecolorpicker
+	@color = params[:color]
 
 	@title = "Thank you!"
-	@message = "Dear #{@user_name}, #{@barber} will wait for you on #{@date_time}"
+	@message = "Dear #{@user_name}, your color is #{@color}, #{@barber} will wait for you on #{@date_time}"
 		
   # save info to file
  	f = File.open './public/users.txt', 'a'
-	f.write "#{@user_name}, phone: #{@phone}, date and time: #{@date_time}, barber: #{@barber}\n"
+	f.write "#{@user_name}, color: #{@color}, phone: #{@phone}, date and time: #{@date_time}, barber: #{@barber}\n"
 	f.close
 
 	erb :message
