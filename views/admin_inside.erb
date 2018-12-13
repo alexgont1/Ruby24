@@ -1,0 +1,23 @@
+<h1>Admin_inside</h1>
+<p><%= @message %></p>
+<p><%= @butt %></p>
+
+Choose:<br> 
+
+<form action="/admin_inside" method="POST" role="form">
+
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="list" name="butt">
+	    List of users
+	  </label>
+  </div>
+  <div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="messages" name="butt">
+	    Messages from users
+	  </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

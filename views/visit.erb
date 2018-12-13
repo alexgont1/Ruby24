@@ -1,0 +1,32 @@
+<h2>Make an appointment</h2>
+<p>Here you can make an appointment</p>
+
+<form action="/visit" method="POST" role="form">
+
+  <div class="form-group">
+    <label>Your name</label>
+    <input name="username" type="text" class="form-control" placeholder="Your name">
+  </div>
+
+  <div class="form-group">
+    <label>Your phone</label>
+    <input name="phone" type="text" class="form-control" placeholder="Your phone">
+  </div>
+
+  <div class="form-group">
+    <label>Date and time?</label>
+    <input name="datetime" type="text" class="form-control" placeholder="Date and time">
+  </div>
+
+  <div class="form-group">
+    <label>Your barber:</label>    
+    <select class="form-control" name="barber">
+      <option>Walter White</option>
+      <option>Jessie Pinkman</option>
+      <option>Gus Fring</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
