@@ -25,7 +25,16 @@ post '/visit' do
 	@color = params[:color]
 
 	if @user_name == ''
-		@error = 'Enter your name!'
+		@error = 'Enter your name'
+	end
+	if @phone == ''
+		@error = 'Enter your phone'
+	end
+	if @date_time == ''
+		@error = 'Enter date and time'
+	end
+
+	if @error != ''
 		return erb :visit
 	end
 
