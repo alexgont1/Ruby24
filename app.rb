@@ -7,6 +7,7 @@ get '/' do
 end
 
 get '/about' do
+	#@error = 'something'
 	erb :about
 end
 
@@ -22,6 +23,11 @@ post '/visit' do
 	@barber = params[:barber]
 	#https://github.com/tkrotoff/jquery-simplecolorpicker
 	@color = params[:color]
+
+	if @user_name == ''
+		@error = 'Enter your name'
+		return erb :visit
+	end
 
 	@title = "Thank you!"
 	@message = "Dear #{@user_name}, your color is #{@color}, #{@barber} will wait for you on #{@date_time}"
